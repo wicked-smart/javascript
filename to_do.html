@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Js To Do</title>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector("#new-task").onsubmit = () => {
+
+                // create new <li> item to be displayed
+                  const li = document.createElement('li');
+                  li.innerHTML = document.querySelector("#task").value;
+
+                //
+                let arr = document.querySelector('#tasks');
+                console.log(arr);
+                arr.append(li);
+                console.log(arr);
+
+                document.querySelector('#task').value="";
+
+                return false;
+            }
+        })
+      </script>
+  </head>
+
+  <body>
+      <h1>Tasks</h1>
+
+      <ul id="tasks">
+      </ul>
+
+      <form id="new-task">
+          <input autocomplete="off" id="task" autofocus placeholder="New Task" type="text">
+          <input type="submit">
+      </form>
+
+  </body>
+</html>

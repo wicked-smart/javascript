@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learning javascript</title>
+		<script>
+			let count=0;
+
+			function increaseCounter(){
+					count++;
+					document.getElementById('bar').innerHTML = count;
+					document.querySelector('#bar').style.color = 'green';
+			}
+
+			function decreaseCounter(){
+				count--;
+				document.getElementById('bar').innerHTML = count;
+				document.querySelector('#bar').style.color = 'red';
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<h1 style="margin-left: 110px" id="bar">0</h1>
+		<button  onclick="increaseCounter()">Increase Counter</button>
+		<button onclick="decreaseCounter()">Decrease Counter</button>
+	</body>
+</html>
